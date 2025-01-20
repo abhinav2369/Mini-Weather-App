@@ -11,11 +11,9 @@
 
         <!-- External CSS Linking -->
         <link rel="stylesheet" href="index.css">
-      
-        <!-- Importing Google Fonts -->
-        <style>
-            @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-        </style>
+
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
       
         <!-- Other Meta Property -->
         <meta property="og:title" content="Weather App">
@@ -29,11 +27,70 @@
 
     <body>
 
-        <main>
+        <div class="container">
+            <div class="weather-app">
 
-        </main>
+                <!-- Search Box -->
+                <div class="search-box">
+                    <i class="fas fa-location-dot"></i>
+                    <input type="text" placeholder="Enter your location" id="city-input">
+                    <button id="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
 
-        <script type="module" src="/index.jsx"></script>
+                <!-- Weather Box -->
+                <div class="weather-box">
+                    <div class="weather-info">
+
+                        <h2 id="city">Weather in City</h2>
+                        <div class="date-time" id="date-time">Loading...</div>
+                        
+                        <div class="weather-details">
+                            <img src="" id="weather-icon">
+                            <h1 id="temperature">--°C</h1>
+                            <p id="description">Description</p>
+                        </div>
+
+                        <!-- Additional Info -->
+                        <div class="additional-info">
+
+                            <!-- Humidity -->
+                            <div class="info-item">
+                                <i class="fas fa-water"></i>
+                                <div>
+                                    <span id="humidity">--%</span>
+                                    <p>Humidity</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Wind Speed -->
+                            <div class="info-item">
+                                <i class="fas fa-wind"></i>
+                                <div>
+                                    <span id="wind-speed">-- km/h</span>
+                                    <p>Wind Speed</p>
+                                </div>
+                            </div>
+
+                            <!-- Feels Like -->
+                            <div class="info-item">
+                                <i class="fas fa-temperature-high"></i>
+                                <div>
+                                    <span id="feels-like">--°C</span>
+                                    <p>Feels Like</p>
+                                </div>
+                            </div>
+
+                        </div>
+                    
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    <script src="script.js"></script>
     </body>
 
 </html>
