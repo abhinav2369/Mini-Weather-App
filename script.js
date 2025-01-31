@@ -59,12 +59,14 @@ function updateDateTime() {
     dateTimeElement.textContent = now.toLocaleString('en-US', options).replace(',', '');
 }
 
+
 function setWeatherBackground(iconCode) {
     const container = document.querySelector('body');
     container.className = '';
     const backgroundClass = weatherBackgrounds[iconCode] || 'default';
     container.classList.add(backgroundClass);
 }
+
 
 async function getWeatherData(city) {
     try {
@@ -116,6 +118,6 @@ cityInput.addEventListener('keypress', (e) => {
         }
 });
 
+
 updateDateTime();
 setInterval(updateDateTime, 1000);
-getWeatherData("Lucknow");
